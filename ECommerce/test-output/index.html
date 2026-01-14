@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>D:\Automation Projects GIT\ECommerce\testng.xml</span>
+                    <span>D:\Automation Projects GIT\Ecommerce-Website\ECommerce\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -113,12 +113,12 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="test.login.LoginTest" class="method navigator-link" hash-for-method="shouldShowErrorMessageForInvalidCredentials({Username=standard_user1, Password=awdawd})">shouldShowErrorMessageForInvalidCredentials({Username=standard_user1, Password=awdawd})</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="test.login.LoginTest" class="method navigator-link" hash-for-method="shouldShowErrorMessageForInvalidCredentials({Username=locked_out_user2, Password=3123123})">shouldShowErrorMessageForInvalidCredentials({Username=locked_out_user2, Password=3123123})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="test.login.LoginTest" class="method navigator-link" hash-for-method="shouldShowErrorMessageForInvalidCredentials({Username=locked_out_user2, Password=3123123})">shouldShowErrorMessageForInvalidCredentials({Username=locked_out_user2, Password=3123123})</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="test.login.LoginTest" class="method navigator-link" hash-for-method="shouldShowErrorMessageForInvalidCredentials({Username=standard_user1, Password=awdawd})">shouldShowErrorMessageForInvalidCredentials({Username=standard_user1, Password=awdawd})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -162,18 +162,18 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="shouldShowErrorMessageForInvalidCredentials({Username=standard_user1, Password=awdawd})">
-                  </a> <!-- shouldShowErrorMessageForInvalidCredentials({Username=standard_user1, Password=awdawd}) -->
-                  <span class="method-name">shouldShowErrorMessageForInvalidCredentials</span>
-                  <span class="parameters">({Username=standard_user1, Password=awdawd})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="shouldShowErrorMessageForInvalidCredentials({Username=locked_out_user2, Password=3123123})">
                   </a> <!-- shouldShowErrorMessageForInvalidCredentials({Username=locked_out_user2, Password=3123123}) -->
                   <span class="method-name">shouldShowErrorMessageForInvalidCredentials</span>
                   <span class="parameters">({Username=locked_out_user2, Password=3123123})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="shouldShowErrorMessageForInvalidCredentials({Username=standard_user1, Password=awdawd})">
+                  </a> <!-- shouldShowErrorMessageForInvalidCredentials({Username=standard_user1, Password=awdawd}) -->
+                  <span class="method-name">shouldShowErrorMessageForInvalidCredentials</span>
+                  <span class="parameters">({Username=standard_user1, Password=awdawd})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -188,7 +188,7 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\Automation Projects GIT\ECommerce\testng.xml</span>
+            <span class="header-content">D:\Automation Projects GIT\Ecommerce-Website\ECommerce\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -197,7 +197,6 @@
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;base.BaseTest&quot;/&gt;
       &lt;class name=&quot;test.login.LoginTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
@@ -212,7 +211,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (2 classes)</span>
+                <span class="test-name">Test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -240,17 +239,17 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'shouldShowErrorMessageForInvalidCredentials')
+data.setCell(0, 1, 'ShouldLoginSuccessfullyWithValidCredentials')
 data.setCell(0, 2, 'test.login.LoginTest')
-data.setCell(0, 3, 302);
+data.setCell(0, 3, 303);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'shouldShowErrorMessageForInvalidCredentials')
 data.setCell(1, 2, 'test.login.LoginTest')
 data.setCell(1, 3, 299);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'ShouldLoginSuccessfullyWithValidCredentials')
+data.setCell(2, 1, 'shouldShowErrorMessageForInvalidCredentials')
 data.setCell(2, 2, 'test.login.LoginTest')
-data.setCell(2, 3, 297);
+data.setCell(2, 3, 290);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'ShouldLoginSuccessfullyWithValidCredentials')
 data.setCell(3, 2, 'test.login.LoginTest')
@@ -258,7 +257,7 @@ data.setCell(3, 3, 266);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'shouldVerifyTheWebsiteHeadline')
 data.setCell(4, 2, 'test.login.LoginTest')
-data.setCell(4, 3, 30);
+data.setCell(4, 3, 25);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -296,59 +295,59 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">ShouldLoginSuccessfullyWithValidCredentials({Username=standard_user, Password=secret_sauce})</span>
-                <span class="method-start">1975 ms</span>
+                <span class="method-start">1956 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">2272 ms</span>
+                <span class="method-start">2241 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">2495 ms</span>
+                <span class="method-start">2450 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">ShouldLoginSuccessfullyWithValidCredentials({Username=problem_user, Password=secret_sauce})</span>
-                <span class="method-start">3697 ms</span>
+                <span class="method-start">3673 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">3965 ms</span>
+                <span class="method-start">3978 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">4160 ms</span>
+                <span class="method-start">4177 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">shouldShowErrorMessageForInvalidCredentials({Username=standard_user1, Password=awdawd})</span>
-                <span class="method-start">5340 ms</span>
+                <span class="method-start">5374 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">5641 ms</span>
+                <span class="method-start">5674 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">5827 ms</span>
+                <span class="method-start">5857 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">shouldShowErrorMessageForInvalidCredentials({Username=locked_out_user2, Password=3123123})</span>
-                <span class="method-start">7312 ms</span>
+                <span class="method-start">7128 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">7616 ms</span>
+                <span class="method-start">7419 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">7780 ms</span>
+                <span class="method-start">7670 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">shouldVerifyTheWebsiteHeadline</span>
-                <span class="method-start">8977 ms</span>
+                <span class="method-start">8922 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">9007 ms</span>
+                <span class="method-start">8949 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
