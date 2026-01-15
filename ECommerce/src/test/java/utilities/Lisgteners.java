@@ -14,26 +14,27 @@ import base.BaseTest;
 public class Lisgteners extends BaseTest implements ITestListener {
 	
 	ExtentReports extent = extentReporterNG.GetReport();
-	ExtentTest test;
+	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
 	
 	@Override
 	public void onTestStart(ITestResult result) {
-		 test = extent.createTest(result.getMethod().getMethodName());
+	  ExtentTest test = extent.createTest(result.getMethod().getMethodName());
+	  extentTest.set(test);
 	}
 	
 	@Override
 	public void onTestSuccess(ITestResult result) {
-		test.pass("Test Passed");
+		extentTest.get().pass("Test Passed");
 	}
 	
 	@Override
 	public void onTestFailure(ITestResult result) {
 		
 		
-		test.fail(result.getThrowable());
+		extentTest.get().fail(result.getThrowable());
 		
 		try {
-			driver =(WebDriver) result.getTestClass().getRealClass().getField("driver").get(result);
+			driver =(WebDriver) result.getTestClass().getRealClass().getField("driver").get(result.getInstance());;
 		} catch (IllegalArgumentException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -51,7 +52,7 @@ public class Lisgteners extends BaseTest implements ITestListener {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		 test.addScreenCaptureFromPath(FilePath, result.getMethod().getMethodName());
+		extentTest.get().addScreenCaptureFromPath(FilePath, result.getMethod().getMethodName());
 		
 	}
 	

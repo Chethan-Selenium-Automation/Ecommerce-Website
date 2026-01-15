@@ -30,16 +30,26 @@ public class BaseTest {
 	  }
 	  
 
-		public String TakeScreenShot(String testCaseName, WebDriver driver) throws IOException {
-		
-			TakesScreenshot file = (TakesScreenshot)driver;
-			File src = file.getScreenshotAs(OutputType.FILE);
-			File dest = new File(System.getProperty("user.dir") + "/report/" + testCaseName + ".png");
-			FileUtils.copyFile(src, dest);
-			return System.getProperty("user.dir") + "/report" + testCaseName + ".png";
-			
-			
+	  public String TakeScreenShot(String testCaseName, WebDriver driver) throws IOException {
+
+		    TakesScreenshot ts = (TakesScreenshot) driver;
+		    File src = ts.getScreenshotAs(OutputType.FILE);
+
+		    String screenshotDir = System.getProperty("user.dir") + "/reports/Screenshots";
+		    File dir = new File(screenshotDir);
+
+		    if (!dir.exists()) {
+		        dir.mkdirs(); // ✅ auto-create folders
+		    }
+
+		    String destPath = screenshotDir + "/" + testCaseName + ".png";
+		    File dest = new File(destPath);
+
+		    FileUtils.copyFile(src, dest);
+
+		    return destPath; // ✅ SAME path returned
 		}
+
 
 
 }

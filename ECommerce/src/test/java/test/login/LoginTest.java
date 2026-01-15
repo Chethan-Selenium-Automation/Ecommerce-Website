@@ -26,7 +26,7 @@ public class LoginTest extends BaseTest {
 		
 		HashMap<String, String> User1 = new HashMap<String,String>(); 
 		User1.put("Username","standard_user");
-		User1.put("Password", "secret_sauce");
+		User1.put("Password", "secret_sauce1");
 		
 		HashMap<String, String> User2 = new HashMap<String,String>(); 
 		User2.put("Username","problem_user");
